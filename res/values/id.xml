@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Secu3Droid - An open source, free manager for SECU-3 engine
+  control unit
+  Copyright (C) 2013 Maksim M. Levin. Russia, Voronezh
+  
+  SECU-3  - An open source, free engine control unit
+  Copyright (C) 2007 Alexey A. Shabelnikov. Ukraine, Gorlovka
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+  contacts:
+             http://secu-3.org
+             email: mmlevin@mail.ru
+-->
+
+<resources>
+    <item type = "id" name="parameter_type_integer"/>
+    <item type = "id" name="parameter_type_float"/>
+    <item type = "id" name="parameter_type_boolean"/>
+    <item type = "id" name="parameter_type_label"/>
+    <item type = "id" name="parameter_type_string"/>
+    <item type = "id" name="parameter_type_button"/>
+    <item type = "id" name="parameter_type_toggle_button"/>
+    <item type = "id" name="parameter_type_spinner"/>
+    
+    <item type = "id" name="field_type_int4"/>
+    <item type = "id" name="field_type_int8"/>
+    <!-- <item type = "id" name="field_type_int16">int16</item> -->    <item type = "id" name="field_type_int16"/>
+    <!-- <item type = "id" name="field_type_int24">int24</item> --> <item type = "id" name="field_type_int24"/>
+    <item type = "id" name="field_type_int32"/>
+    <item type = "id" name="field_type_float4"/>
+    <item type = "id" name="field_type_float8"/>
+    <!-- <item type = "id" name="field_type_float16">float16</item> --> <item type = "id" name="field_type_float16"/>
+    <item type = "id" name="field_type_float24"/>
+    <item type = "id" name="field_type_float32"/>
+	<item type = "id" name="field_type_string"/>
+    
+    <item type = "id" name="GaugeSpeedometer"/>
+    <item type = "id" name="GaugeOdometer"/>
+    <item type = "id" name="GaugeTachometer"/>
+    <item type = "id" name="GaugeThermometer"/>
+    <item type = "id" name="GaugeVoltmeter"/>
+    <!-- <item type = "id" name="GaugeManometer">manometer</item> -->     <item type = "id" name="GaugeManometer"/>
+    <item type = "id" name="GaugeSprite"/>
+	<item type = "id" name="LedOnline"/>
+    <item type = "id" name="LedCheckEngine"/>
+    <item type = "id" name="LedGasoline"/>
+    <item type = "id" name="LedEco"/>
+    <item type = "id" name="LedPower"/>
+    <item type = "id" name="LedChoke"/>
+    <item type = "id" name="LedFan"/>
+</resources>

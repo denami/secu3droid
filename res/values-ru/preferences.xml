@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Secu3Droid - An open source, free manager for SECU-3 engine
+  control unit
+  Copyright (C) 2013 Maksim M. Levin. Russia, Voronezh
+  
+  SECU-3  - An open source, free engine control unit
+  Copyright (C) 2007 Alexey A. Shabelnikov. Ukraine, Gorlovka
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+  contacts:
+             http://secu-3.org
+             email: mmlevin@mail.ru
+
+-->
+
+<resources>
+    <string name="pref_bluetooth_device_title">Выбор устройства Bluetooth</string>
+    <string name="pref_bluetooth_device_summary">Текущее устройство: %s</string>
+	<string name="pref_binary_mode_title">Двоичный режим</string>
+	<string name="pref_speed_pulse_title">Импульсов датчика скорости на 1 км</string>
+    <string name="pref_binary_mode_summary">Прошивка Secu-3 должна быть скомпилирована с опицей UART_BINARY, требует перезапуска при изменении</string>        
+    <string name="pref_protocol_version_title">Выберите версию протокола</string>
+    <string name="pref_protocol_version_summary">Текущая версия протокола: %s, требует перезапуска при изменении</string>
+    <string name="pref_connection_retries_title">Количество попыток повтора соединения</string>
+    <string name="pref_connection_retries_summary">Число попыток до выхода: %s</string>
+    <string name="pref_about_title">О программе</string>
+    <string name="pref_about_summary"/>
+    <string name="pref_upload_immediately_title">Загружать изменения немедленно</string>
+    <string name="pref_upload_immediately_summary">При изменении значения пользователем</string>
+    <string name="pref_write_log_title">Запись лога сенсоров</string>
+    <string name="pref_write_log_summary">Записывать информацию с сенсоров в лог</string>
+    <string name="pref_log_csv_delimeter_title">Символ-разделитель лога</string>
+    <string name="pref_log_csv_delimeter_summary">Встановлено: %1$s</string>
+    <string name="pref_write_raw_log_title">Запись лога обмена</string>
+    <string name="pref_write_raw_log_summary">Запись обмена данными между Secu-3 и менеджером</string>    
+    <string name="pref_write_log_path_title">Путь для сохранения логов</string>
+    <string name="pref_write_log_path_summary">Если ничего не введено, лог будет сохраняться в %1$s</string>
+    <string name="pref_night_mode_title">Ночной режим</string>
+    <string name="pref_night_mode_summary">Использовать темное оформление, требует перезапуска</string>
+    <string name="pref_keep_screen_title">Не выключать экран</string>
+    <string name="pref_keep_screen_summary">Экран остается включенным, пока отображаются данные сенсоров</string>
+    <string name="pref_wakelock_title">Оставлять устройство включенным</string>
+    <string name="pref_wakelock_summary">CPU всегда работает, пока запущен Secu3Droid</string>
+</resources>

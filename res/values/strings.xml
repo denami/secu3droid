@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Secu3Droid - An open source, free manager for SECU-3 engine
+  control unit
+  Copyright (C) 2013 Maksim M. Levin. Russia, Voronezh
+  
+  SECU-3  - An open source, free engine control unit
+  Copyright (C) 2007 Alexey A. Shabelnikov. Ukraine, Gorlovka
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+  contacts:
+             http://secu-3.org
+             email: mmlevin@mail.ru
+
+-->
+
+<resources>
+    <string name="app_name">Secu3Droid</string>
+    <string name="title_activity_param">Parameters</string>
+    <string name="menu_param">Parameters</string>    
+    <string name="service_closed_because_connection_problem_notification_title">Secu3Droid stopped</string>
+    <string name="service_closed_because_connection_problem_notification">"Reason: %1$s"</string>
+    <string name="connection_problem_notification_title">Secu3: connection problem</string>
+
+    <plurals name="connection_problem_notification">
+        <item quantity="one">Will retry one more time before closing</item>
+        <item quantity="other">Will retry %d more times before closing</item>
+    </plurals>
+
+    <string name="foreground_service_started_notification_title">Secu3Droid</string>
+    <string name="foreground_service_started_notification">Secu3Droid service started</string>
+    <string name="msg_bluetooth_unsupported">Bluetooth is not supported on your Android device</string>
+    <string name="msg_bluetooth_disabled">Bluetooth is disabled</string>
+    <string name="msg_bluetooth_secu3_unavaible">Cannot connect to Secu-3 device</string>
+    <string name="msg_service_started">Secu3Droid… started</string>
+    <string name="msg_service_stopped">Secu3Droid service… stopped</string>
+    <string name="msg_service_stopped_by_problem">"Cannot start: %s"</string>
+    <string name="msg_service_already_started">Secu3Droid… is already on</string>
+    <string name="msg_too_many_connection_problems">Too many connection problems</string>
+    <string name="status_offline">Offline</string>
+    <string name="status_online">Online</string>
+    <string name="title_activity_errors">Errors</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="menu_errors">Errors</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="dialog_device_not_supported_title">Device is not supported!</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_raw_sensors">Raw values</string>
+    <string name="menu_exit">Exit</string>
+    <string name="menu_diagnostics">Diagnostics</string>
+    <string name="menu_diagnostics_warning_title">WARNING! Disconnect ignition coils before entering diagnostic mode. Before testing of BL, DE outputs make sure that corresp. jumpers are opened!\nWARNING! Displayed inputs\' values are on the MCU lines, not on the external connector (there are differences).</string>
+    <string name="menu_params_download_title">Download</string>
+    <string name="menu_params_upload_title">Upload</string>
+    <string name="menu_params_save_eeprom_title">Save</string>
+    <string name="menu_errors_read">Read</string>
+    <string name="menu_errors_write">Store</string>
+    <string name="about_title">About</string>
+    <string name="about_version">Secu3Droid version</string>
+    <string name="about_copyright_1">Copyright © 2013 Maksim Levin</string>
+    <string name="about_copyright_2">Copyright © 2013 Secu3Droid Project</string>
+    <string name="about_app_desc">Secu3Droid is an application for managing Secu-3 ignition system. Secu-3 is an open source, free engine control unit, see <a href="http://secu-3.org"><b>http://secu-3.org</b></a>"</string>
+    <string name="about_license">It is open source software distributed free of charge under the terms of the <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html"><b>GNU General Public License</b></a>.</string>
+    <string name="about_sources">The source code is available from Git repository on the project website: https://github.com/mmlevin/secu3droid</string>
+    <string name="about_opensource">Secu3Droid uses next open-source software:\nhttp://www.andengine.org\nhttps://github.com/SimonVT/android-numberpicker</string>
+    <string name="about_acknowledgements">Acknowledgements: \nUkrainian localization - V.\nNFS dashboard skin - alvikagal</string>
+    <string name="injector_overflow_message">Overflow detected while calculating constant for the ideal gas law equation! Change configuration to eliminate this error.</string>
+   
+    <string-array name="diagnostics_fragments_title">
+        <item>Inputs</item>
+        <item>Outputs</item>
+        <item>Chart</item>
+    </string-array>
+
+    <string name="data_will_appear_after_connect">Data will be visible there after connection to Secu-3 device</string>
+
+    <string-array name="errors_ecu_errors_names">
+        <item>Failures in working of CKP sensor - synchronization errors</item>
+        <item>EEPROM parameters are damaged (CRC)</item>
+        <item>Firmware code is damaged (CRC)</item>
+        <item>Knock chip doesn\'t respond</item>
+        <item>Detonation detected</item>
+        <item>Breakage or wrong work of MAP sensor</item>
+        <item>Breakage or wrong work of coolant temperature sensor</item>
+        <item>Abnormal board voltage</item>
+        <item>Dwell control</item>
+        <item>Breakage or wrong work of cam sensor</item>
+        <item>Breakage or wrong indications of TPS</item>
+    </string-array>
+    
+    <string name="log_marker_1">Mrk.#1</string>
+    <string name="log_marker_2">Mrk.#2</string>
+    <string name="log_marker_3">Mrk.#3</string>    
+    <string name="errors_realtime_errors_title">Read errors in realtime</string>
+    <string name="errors_inertion_title">Show errors with inertness</string>
+    <string name="title_activity_diagnostics">Diagnostics</string>
+    <string name="action_settings">Settings</string>
+    <string name="diagnostics_not_supported_title">Diagnostics option disabled in your firmware or Secu-3 device not connected</string>
+    <string name="errors_code">Error code %s</string>
+    <string name="diag_input_voltage_title" translatable="false">Voltage</string>
+    <string name="diag_input_map_s" translatable="false">MAP_S</string>
+    <string name="diag_input_temp" translatable="false">TEMP</string>
+    <string name="diag_input_add_io1" translatable="false">ADD_IO1</string>
+    <string name="diag_input_add_io2" translatable="false">ADD_IO2</string>
+    <string name="diag_input_carb_title" translatable="false">CARB</string>
+    <string name="diag_input_gas_v" translatable="false">GAS_V</string>
+    <string name="diag_input_ckps" translatable="false">CKPS</string>
+    <string name="diag_input_ref_s" translatable="false">REF_S</string>
+    <string name="diag_input_ps" translatable="false">PS</string>
+    <string name="diag_input_bl" translatable="false">BL</string>
+    <string name="diag_input_de" translatable="false">DE</string>
+    <string name="diag_input_ks1_title" translatable="false">KS_1</string>
+    <string name="diag_input_ks2_title" translatable="false">KS_2</string>
+    <string name="diag_enable_bl_de">Enable BL/DE outputs diagnostics</string>
+    <string name="params_saved_error_code">Parameters saved</string>    
+    <string name="errors_saved_error_code">Errors saved</string>    
+</resources>
