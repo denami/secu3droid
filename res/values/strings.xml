@@ -40,6 +40,7 @@
     </plurals>
 
     <string name="foreground_service_started_notification_title">Secu3Droid</string>
+    <string name="service_chanel_title" translatable="false">Secu3Droid</string>
     <string name="foreground_service_started_notification">Secu3Droid service started</string>
     <string name="msg_bluetooth_unsupported">Bluetooth is not supported on your Android device</string>
     <string name="msg_bluetooth_disabled">Bluetooth is disabled</string>

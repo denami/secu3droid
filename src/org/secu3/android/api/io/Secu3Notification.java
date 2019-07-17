@@ -29,6 +29,7 @@ import org.secu3.android.MainActivity;
 import org.secu3.android.R;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -47,20 +48,29 @@ public class Secu3Notification {
 
 	public Secu3Notification(Context ctx) {
 		this.ctx = ctx;
-		notificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);			
+		notificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
 
-		secu3Notification = new NotificationCompat.Builder(ctx)
+		String NOTIFICATION_CHANNEL_ID = ctx.getString(R.string.service_chanel_title);
+
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+			NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Secu3droid Notifications", NotificationManager.IMPORTANCE_DEFAULT);
+			notificationChannel.setDescription("Secu3droid channel");
+			notificationManager.createNotificationChannel(notificationChannel);
+		}
+
+
+		secu3Notification = new NotificationCompat.Builder(ctx, ctx.getString(R.string.service_chanel_title))
 			.setContentTitle(ctx.getString(R.string.foreground_service_started_notification_title))
 			.setSmallIcon(R.drawable.ic_launcher)											
 			.setWhen(System.currentTimeMillis())
 			.setOngoing(true)
 			.setContentIntent(PendingIntent.getActivity(ctx, 0, new Intent (ctx,MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT)).build();
 
-		connectionProblemNotification = new NotificationCompat.Builder(ctx)
+		connectionProblemNotification = new NotificationCompat.Builder(ctx, ctx.getString(R.string.service_chanel_title))
 			.setSmallIcon(R.drawable.ic_launcher)
 			.setContentIntent(PendingIntent.getActivity(ctx, 0, new Intent(ctx, MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT)).build();
 
-		serviceStoppedNotification = new NotificationCompat.Builder(ctx)
+		serviceStoppedNotification = new NotificationCompat.Builder(ctx, ctx.getString(R.string.service_chanel_title))
 			.setSmallIcon(R.drawable.ic_launcher)
 			.setContentIntent(PendingIntent.getActivity(ctx, 0, new Intent(ctx, MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT)).build();
 	}
@@ -68,7 +78,7 @@ public class Secu3Notification {
 	public void notifyConnectionProblem (int maxConnectionRetries, int nbRetriesRemaining) {
 		String pbMessage = ctx.getResources().getQuantityString(R.plurals.connection_problem_notification, nbRetriesRemaining, nbRetriesRemaining);
 		
-		connectionProblemNotification = new NotificationCompat.Builder (ctx)
+		connectionProblemNotification = new NotificationCompat.Builder (ctx, ctx.getString(R.string.service_chanel_title))
 				.setContentTitle(ctx.getString(R.string.connection_problem_notification_title))
 				.setContentText(pbMessage)
 				.setWhen(System.currentTimeMillis())
@@ -80,7 +90,7 @@ public class Secu3Notification {
 	
 	public void notifyServiceStopped (int disableReason) {
 		String strDisableReason = ctx.getString(disableReason);
-		serviceStoppedNotification = new NotificationCompat.Builder(ctx)
+		serviceStoppedNotification = new NotificationCompat.Builder(ctx, ctx.getString(R.string.service_chanel_title))
 				.setContentTitle(ctx.getString(R.string.service_closed_because_connection_problem_notification_title))
 				.setContentText(ctx.getString(R.string.service_closed_because_connection_problem_notification, strDisableReason))
 				.setWhen(System.currentTimeMillis())
