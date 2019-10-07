@@ -118,22 +118,22 @@ public class Secu3SensorLogger extends Secu3Logger {
 			val = (temp == 0x7FFF)?0.00f:((ProtoFieldFloat) packet.getField(R.string.sensor_dat_advance_idling_regulator_title)).getValue();
 			out += String.format(Locale.US, "%6.2f%c", val, CSV_DELIMETER);
 
-			temp = ((ProtoFieldFloat) packet.getField(R.string.sensor_dat_advance_octane_correction_title)).getIntValue();
-			val = (temp == 0x7FFF)?0.00f:((ProtoFieldFloat) packet.getField(R.string.sensor_dat_advance_octane_correction_title)).getValue();
-			out += String.format(Locale.US, "%6.2f%c", val, CSV_DELIMETER);
+//			temp = ((ProtoFieldFloat) packet.getField(R.string.sensor_dat_advance_octane_correction_title)).getIntValue();
+//			val = (temp == 0x7FFF)?0.00f:((ProtoFieldFloat) packet.getField(R.string.sensor_dat_advance_octane_correction_title)).getValue();
+//			out += String.format(Locale.US, "%6.2f%c", val, CSV_DELIMETER);
 		}
 
-		if (protocol_version >= SettingsActivity.PROTOCOL_10022015_WINTER_RELEASE) {
-			out += String.format(Locale.US, "%6.2f%c", ((ProtoFieldFloat) packet.getField(R.string.sensor_dat_lambda_correction_title)).getValue(), CSV_DELIMETER);
-			out += String.format(Locale.US, "%6.2f%c", ((ProtoFieldFloat) packet.getField(R.string.sensor_dat_injection_pulse_title)).getValue(), CSV_DELIMETER);
-		}
+//		if (protocol_version >= SettingsActivity.PROTOCOL_10022015_WINTER_RELEASE) {
+//			out += String.format(Locale.US, "%6.2f%c", ((ProtoFieldFloat) packet.getField(R.string.sensor_dat_lambda_correction_title)).getValue(), CSV_DELIMETER);
+//			out += String.format(Locale.US, "%6.2f%c", ((ProtoFieldFloat) packet.getField(R.string.sensor_dat_injection_pulse_title)).getValue(), CSV_DELIMETER);
+//		}
 
-		if (protocol_version >= SettingsActivity.PROTOCOL_14012014_WINTER_RELEASE) {
-			out += String.format(Locale.US, "%01d%c", marker,CSV_DELIMETER);
-		}
+//		if (protocol_version >= SettingsActivity.PROTOCOL_14012014_WINTER_RELEASE) {
+//			out += String.format(Locale.US, "%01d%c", marker,CSV_DELIMETER);
+//		}
 		marker = 0;
 		
-		out += String.format(Locale.US, "%s\r\n", IntToBinaryString(((ProtoFieldInteger) packet.getField(R.string.sensor_dat_errors_title)).getValue()));
+//		out += String.format(Locale.US, "%s\r\n", IntToBinaryString(((ProtoFieldInteger) packet.getField(R.string.sensor_dat_errors_title)).getValue()));
 
 		return out;
 	}

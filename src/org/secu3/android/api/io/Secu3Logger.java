@@ -31,7 +31,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.GregorianCalendar;
+
+import android.Manifest;
 import android.os.Environment;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 public abstract class Secu3Logger {

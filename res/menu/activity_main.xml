@@ -27,7 +27,12 @@
 
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:android="http://schemas.android.com/apk/res/android">
-	<item android:id="@+id/menu_dashboard" android:title="@string/menu_dashboard" app:showAsAction="never" android:icon="@android:drawable/ic_menu_preferences"/>
+	<item
+		android:id="@+id/menu_dashboard"
+		android:title="@string/menu_dashboard"
+		app:showAsAction="never"
+		android:icon="@android:drawable/ic_menu_preferences"
+		android:visible="false"/>
 	<item
 		android:id="@+id/menu_preferences"
 		android:icon="@android:drawable/ic_menu_preferences"

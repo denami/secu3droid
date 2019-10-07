@@ -39,7 +39,7 @@
 	<CheckBoxPreference
 	    android:key="@string/pref_binary_mode_key"
 	    android:title="@string/pref_binary_mode_title"
-	    android:defaultValue="false"
+	    android:defaultValue="true"
 	    android:summary="@string/pref_binary_mode_summary"/>	
 	<EditTextPreference
 		android:key="@string/pref_connection_retries_key"

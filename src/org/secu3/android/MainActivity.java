@@ -33,6 +33,8 @@ import org.secu3.android.api.io.Secu3Packet;
 import org.secu3.android.api.io.Secu3Service;
 import org.secu3.android.api.utils.PacketUtils;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.PowerManager;
@@ -45,6 +47,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -55,7 +59,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
 public class MainActivity extends Activity {
+	private static final int PERMISSION_REQUEST_CODE = 200;
 	private static final String RAW_SENSORS = "RAW_SENSORS";
 	private static final String STATUS = "status";
 	private static final String DATA = "data";	
@@ -95,8 +103,35 @@ public class MainActivity extends Activity {
 
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {		
-		setTheme(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.pref_night_mode_key), false)?R.style.AppBaseTheme:R.style.AppBaseTheme_Light);	
+	protected void onCreate(Bundle savedInstanceState) {
+
+		if (ContextCompat.checkSelfPermission(this,
+				WRITE_EXTERNAL_STORAGE)
+				!= PackageManager.PERMISSION_GRANTED) {
+			if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+					WRITE_EXTERNAL_STORAGE)) {
+			}
+			else {
+				ActivityCompat.requestPermissions(this,
+						new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+						PERMISSION_REQUEST_CODE);
+			}
+		}
+
+		if (ContextCompat.checkSelfPermission(this,
+				READ_EXTERNAL_STORAGE)
+				!= PackageManager.PERMISSION_GRANTED) {
+			if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+					READ_EXTERNAL_STORAGE)) {
+			}
+			else {
+				ActivityCompat.requestPermissions(this,
+						new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+						PERMISSION_REQUEST_CODE);
+			}
+		}
+
+		setTheme(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.pref_night_mode_key), false)?R.style.AppBaseTheme:R.style.AppBaseTheme_Light);
 		setContentView(R.layout.activity_main);		
 
 		packetUtils = new PacketUtils(this);
