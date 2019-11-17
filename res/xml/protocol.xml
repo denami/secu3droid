@@ -93,12 +93,24 @@
             app:type="@id/field_type_float16"
             app:divider="@integer/protocol_temp_physical_magnitude_divider"
             app:signed="true"/>
+        <!-- TODO check tupe of value -->
+        <Field app:name="@string/carbur_fuelcut_revlim_lot_title"
+            app:minVersion="5"
+            app:type="@id/field_type_float16"
+            app:divider="@integer/protocol_temp_physical_magnitude_divider"
+            app:signed="true"/>
+        <!-- TODO check tupe of value -->
+        <Field app:name="@string/carbur_fuelcut_revlim_hit_title"
+            app:minVersion="5"
+            app:type="@id/field_type_float16"
+            app:divider="@integer/protocol_temp_physical_magnitude_divider"
+            app:signed="true"/>
     </Packet>
 
     <Packet app:name="@string/idling_title"
         app:packet_id="@string/packet_type_idlreg_par">
         <Field app:name="@string/idlreg_use_idle_regulator_title"
-            app:type="@id/field_type_int4"/>
+            app:type="@id/field_type_int8"/>
         <Field app:name="@string/idlreg_ifac1_title"
             app:type="@id/field_type_float16"
             app:divider="@integer/protocol_angle_divider"
@@ -124,6 +136,29 @@
         <Field app:name="@string/idlreg_turn_on_temp_title"
             app:type="@id/field_type_float16"
             app:divider="@integer/protocol_temp_physical_magnitude_divider"/>
+
+        <!-- TODO Check and rename -->
+        <Field app:name="@string/idlreg_to_run_add_title"
+            app:type="@id/field_type_int8"/>
+        <Field app:name="@string/idlreg_rpm_on_run_add_title"
+            app:type="@id/field_type_int8"/>
+        <Field app:name="@string/idlreg_reg_p_title"
+            app:type="@id/field_type_int16"/>
+        <Field app:name="@string/idlreg_reg_i_title"
+            app:type="@id/field_type_int16"/>
+        <Field app:name="@string/idlreg_coef_thrd1_title"
+            app:type="@id/field_type_int8"/>
+        <Field app:name="@string/idlreg_coef_thrd2_title"
+            app:type="@id/field_type_int8"/>
+        <Field app:name="@string/idlreg_intrpm_lim_title"
+            app:type="@id/field_type_int8"/>
+        <Field app:name="@string/idlreg_map_value_title"
+            app:type="@id/field_type_int16"/>
+        <Field app:name="@string/idlreg_iacminpos_title"
+            app:type="@id/field_type_int8"/>
+        <Field app:name="@string/idlreg_iacmaxpos_title"
+            app:type="@id/field_type_int8"/>
+        <!-- TODO Check and rename end block -->
     </Packet>
 
     <Packet app:name="@string/angles_title"
@@ -175,6 +210,15 @@
             app:divider="@integer/protocol_map_physical_magnitude_curve_divider"
             app:multiplier="@integer/protocol_map_physical_magnitude_curve_multiplier"
             app:signed="true"/>
+        <Field app:name="@string/funset_map_sensor2_offset_title"
+            app:type="@id/field_type_float16"
+            app:divider="@integer/protocol_adc_divider_title"
+            app:signed="true"/>
+        <Field app:name="@string/funset_map_sensor2_gradient_title"
+            app:type="@id/field_type_float16"
+            app:divider="@integer/protocol_map_physical_magnitude_curve_divider"
+            app:multiplier="@integer/protocol_map_physical_magnitude_curve_multiplier"
+            app:signed="true"/>
         <Field app:name="@string/funset_tps_curve_offset_title"
             app:type="@id/field_type_float16"
             app:divider="@integer/protocol_adc_divider_title"
@@ -184,6 +228,13 @@
             app:divider="@integer/protocol_tps_physical_magnitude_divider"
             app:multiplier="@integer/protocol_tps_physical_magnitude_multiplier"
             app:signed="true"/>
+        <!-- TODO Check tupe and name -->
+        <Field app:name="@string/funset_load_src_cfg_title"
+            app:type="@id/field_type_int4"/>
+        <Field app:name="@string/funset_mapsel_uni_title"
+            app:type="@id/field_type_int8"/>
+        <Field app:name="@string/funset_barocorr_type_title"
+            app:type="@id/field_type_int8"/>
     </Packet>
 
     <Packet app:name="@string/starter_title"
@@ -213,6 +264,12 @@
             app:minVersion="5"
             app:type="@id/field_type_float8"
             app:secu_divider="10"/>
+
+        <!-- TODO check type -->
+        <Field app:name="@string/starter_floodclear_tps_title"
+            app:minVersion="5"
+            app:type="@id/field_type_int8"/>
+
     </Packet>
 
     <Packet app:name="@string/adc_errors_title"
@@ -271,14 +328,34 @@
             app:divider="@integer/protocol_adccor_factor_divider"
             app:offset="@integer/protocol_adccor_correction_offset"
             app:signed="true"/>
+        <Field app:name="@string/adccor_addi3_sensor_factor_title"
+            app:type="@id/field_type_float16"
+            app:divider="@integer/protocol_adccor_factor_divider"
+            app:signed="true"/>
+        <Field app:name="@string/adccor_addi3_sensor_correction_title"
+            app:type="@id/field_type_float32"
+            app:divider="@integer/protocol_adccor_factor_divider"
+            app:offset="@integer/protocol_adccor_correction_offset"
+            app:signed="true"/>
+        <Field app:name="@string/adccor_addi4_sensor_factor_title"
+            app:type="@id/field_type_float16"
+            app:divider="@integer/protocol_adccor_factor_divider"
+            app:signed="true"/>
+        <Field app:name="@string/adccor_addi4_sensor_correction_title"
+            app:type="@id/field_type_float32"
+            app:divider="@integer/protocol_adccor_factor_divider"
+            app:offset="@integer/protocol_adccor_correction_offset"
+            app:signed="true"/>
     </Packet>
 
+
+    <!-- TODO Fix a lot of errors -->
     <Packet app:name="@string/ckps_title"
         app:packet_id="@string/packet_type_ckps_par">
         <Field app:name="@string/ckps_ckps_edge_title"
-            app:type="@id/field_type_int4"/>
+            app:type="@id/field_type_int8"/>
         <Field app:name="@string/ckps_ref_s_edge_title"
-            app:type="@id/field_type_int4"/>
+            app:type="@id/field_type_int8"/>
         <Field app:name="@string/ckps_cogs_before_tdc_title"
             app:type="@id/field_type_int8"/>
         <Field app:name="@string/ckps_ignition_pulse_delay_title"
@@ -286,18 +363,20 @@
         <Field app:name="@string/ckps_engine_cylinders_title"
             app:type="@id/field_type_int8"/>
         <Field app:name="@string/ckps_merge_outputs_title"
-            app:type="@id/field_type_int4"/>
+            app:type="@id/field_type_int8"/>
         <Field app:name="@string/ckps_cogs_number_title"
-            app:type="@id/field_type_int8"/>
+            app:type="@id/field_type_int16"/>
         <Field app:name="@string/ckps_missing_cogs_number_title"
-            app:type="@id/field_type_int8"/>
+            app:type="@id/field_type_int16"/>
+
+    <!--  Outdated from latest proto
         <Field app:name="@string/ckps_flags_title"
             app:minVersion="4"
             app:type="@id/field_type_int8"/>
         <Field app:name="@string/ckps_hall_wnd_width_title"
             app:minVersion="4"
             app:type="@id/field_type_float16"
-            app:divider="@integer/protocol_angle_divider"/>
+            app:divider="@integer/protocol_angle_divider"/>  -->
     </Packet>
 
     <Packet app:name="@string/miscellaneous_title"
@@ -316,6 +395,17 @@
             app:type="@id/field_type_int8"/>
         <Field app:name="@string/miscel_hall_output_delay_title"
             app:type="@id/field_type_int8"/>
+
+        <!-- TODO check names and type -->
+        <Field app:name="@string/miscel_fuel_pump_flags_title"
+            app:type="@id/field_type_int8"/>
+        <Field app:name="@string/miscel_evap_afbegin_title"
+            app:type="@id/field_type_int16"/>
+        <Field app:name="@string/miscel_evap_afslope_title"
+            app:type="@id/field_type_int16"/>
+        <Field app:name="@string/miscel_fp_timeout_strt_title"
+            app:type="@id/field_type_int8"/>
+
     </Packet>
 
     <Packet app:name="@string/ce_saved_err_title"
@@ -333,9 +423,12 @@
     <Packet app:name="@string/op_comp_nc_title"
         app:packet_id="@string/packet_type_op_comp_nc">
         <Field app:name="@string/op_comp_nc_operation_code_title"
-            app:type="@id/field_type_int8"/>
+            app:type="@id/field_type_int16"/>
+
+        <!-- Out of date for last release
         <Field app:name="@string/op_comp_nc_operation_title"
             app:type="@id/field_type_int8"/>
+        -->
     </Packet>
 
     <Packet app:name="@string/adcraw_dat_title"
@@ -361,8 +454,16 @@
         <Field app:name="@string/adcraw_addi2_title"
             app:type="@id/field_type_float16"
             app:divider="@integer/protocol_adc_divider_title"/>
+        <Field app:name="@string/adcraw_addi3_title"
+            app:type="@id/field_type_float16"
+            app:divider="@integer/protocol_adc_divider_title"/>
+        <Field app:name="@string/adcraw_addi4_title"
+            app:type="@id/field_type_float16"
+            app:divider="@integer/protocol_adc_divider_title"/>
     </Packet>
 
+
+    <!-- TODO CHECK -->
     <Packet app:name="@string/fnname_dat_title"
         app:packet_id="@string/packet_type_fnname_dat">
         <Field app:name="@string/fnname_dat_quantity_title"
@@ -372,6 +473,14 @@
         <Field app:name="@string/fnname_dat_data_title"
             app:type="@id/field_type_string"
             app:length="16"/>
+    </Packet>
+
+    <!-- New packet -->
+    <Packet app:name="@string/signf_dat_title"
+        app:packet_id="@string/packet_type_siginf_dat">
+        <Field app:name="@string/signf_dat_data_title"
+            app:type="@id/field_type_string"
+            app:length="60"/>
     </Packet>
 
     <Packet app:name="@string/fwinfo_dat_title"

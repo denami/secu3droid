@@ -83,8 +83,10 @@
     <string name="funset_upper_pressure_title">Верхнее значение давления</string>
 	<string name="funset_upper_pressure_summary">Настройка оси давления в рабочей таблице</string>    
     <string name="funset_map_sensor_offset_title">Смещение кривой ДАД</string>
+    <string name="funset_map_sensor2_offset_title">Смещение кривой ДАД2</string>
     <string name="funset_map_sensor_offset_summary"/>
     <string name="funset_map_sensor_gradient_title">Наклон кривой ДАД</string>
+    <string name="funset_map_sensor2_gradient_title">Наклон кривой ДАД2</string>
     <string name="funset_map_sensor_gradient_summary"/>
     <string name="funset_maps_set_gasoline_title">Набор таблиц для бензина</string>
     <string name="funset_maps_set_gasoline_summary"/>
@@ -155,8 +157,12 @@
     <string name="adccor_addi1_sensor_correction_title">Вход ADD_IO1</string>
     <string name="adccor_addi1_sensor_correction_summary">Коррекция</string>
     <string name="adccor_addi2_sensor_factor_title">Вход ADD_IO2</string>
+    <string name="adccor_addi3_sensor_factor_title">Вход ADD_IO3</string>
+    <string name="adccor_addi4_sensor_factor_title">Вход ADD_IO4</string>
     <string name="adccor_addi2_sensor_factor_summary">Коэффициент</string>
     <string name="adccor_addi2_sensor_correction_title">Вход ADD_IO2</string>
+    <string name="adccor_addi3_sensor_correction_title">Вход ADD_IO3</string>
+    <string name="adccor_addi4_sensor_correction_title">Вход ADD_IO4</string>
     <string name="adccor_addi2_sensor_correction_summary">Коррекция</string>
     
     <string name="ckps_title">ДПКВ</string>

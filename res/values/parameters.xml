@@ -43,7 +43,9 @@
     <string name="starter_dat_prime_pulse_hot_summary"/>
     <string name="starter_dat_prime_pulse_delay_title">Prime pulse delay</string>
     <string name="starter_dat_prime_pulse_delay_summary"/>
-    
+
+    <string name="starter_floodclear_tps_title" translatable="false">starter_floodclear_tps_title</string>
+
     <string name="angles_title">Angles</string>
     <string name="angles_min_angle_title">Minimal advance angle</string>
     <string name="angles_min_angle_summary"/>
@@ -75,15 +77,30 @@
     <string name="idlreg_use_idle_regulator_summary"/>
     <string name="idlreg_turn_on_temp_title">Regulator turn on temperature</string>
     <string name="idlreg_turn_on_temp_summary"/>
-    
+
+    <!-- TODO Check and rename -->
+    <string name="idlreg_to_run_add_title" translatable="false" >idlreg_to_run_add_title</string>
+    <string name="idlreg_rpm_on_run_add_title" translatable="false">idlreg_rpm_on_run_add_title</string>
+    <string name="idlreg_reg_p_title" translatable="false">idlreg_reg_p_title</string>
+    <string name="idlreg_reg_i_title" translatable="false">idlreg_reg_i_title</string>
+    <string name="idlreg_coef_thrd1_title" translatable="false">idlreg_coef_thrd1_title</string>
+    <string name="idlreg_coef_thrd2_title" translatable="false">idlreg_coef_thrd2_title</string>
+    <string name="idlreg_intrpm_lim_title" translatable="false">idlreg_intrpm_lim_title</string>
+    <string name="idlreg_map_value_title" translatable="false">idlreg_map_value_title</string>
+    <string name="idlreg_iacminpos_title" translatable="false">idlreg_iacminpos_title</string>
+    <string name="idlreg_iacmaxpos_title" translatable="false">idlreg_iacmaxpos_title</string>
+    <!-- TODO Check and rename end block -->
+
     <string name="functions_title">Functions</string>
     <string name="funset_lower_pressure_title">Lower pressure value</string>
     <string name="funset_lower_pressure_summary"/>
     <string name="funset_upper_pressure_title">Upper pressure value</string>
     <string name="funset_upper_pressure_summary"/>
     <string name="funset_map_sensor_offset_title">MAP Sensor Curve offset</string>
+    <string name="funset_map_sensor2_offset_title">MAP Sensor2 Curve offset</string>
     <string name="funset_map_sensor_offset_summary"/>
     <string name="funset_map_sensor_gradient_title">MAP sensor curve gradient</string>
+    <string name="funset_map_sensor2_gradient_title">MAP sensor2 curve gradient</string>
     <string name="funset_map_sensor_gradient_summary"/>
     <string name="funset_maps_set_gasoline_title">Maps set for gasoline</string>
     <string name="funset_maps_set_gasoline_summary"/>
@@ -93,7 +110,12 @@
 	<string name="funset_tps_curve_offset_summary"/>
     <string name="funset_tps_curve_gradient_title">TPS curve gradient</string>
     <string name="funset_tps_curve_gradient_summary"/>
-    
+
+    <!-- TODO Check and rename translate-->
+    <string name="funset_load_src_cfg_title" translatable="false">funset_load_src_cfg_title</string>
+    <string name="funset_mapsel_uni_title" translatable="false">funset_mapsel_uni_title</string>
+    <string name="funset_barocorr_type_title" translatable="false">funset_barocorr_type_title</string>
+
     <string name="temperature_title">Temperature</string>
     <string name="temper_fan_on_title">Fan turn on threshold</string>
     <string name="cond_pvt_on_title">Conditioner clutch turn on threshold</string>
@@ -133,8 +155,17 @@
     <string name="carbur_fuelcut_map_threshold_title">Fuel cut MAP threshold</string>
     <string name="carbur_fuelcut_map_threshold_summary"/>
     <string name="carbur_fuelcut_temp_threshold_title">Fuel cut CTS threshold</string>
+
+    <!-- TODO RENAME -->
+    <string name="carbur_fuelcut_revlim_lot_title" translatable="false">revlim_lot</string>
+
+    <!-- TODO RENAME -->
+    <string name="carbur_fuelcut_revlim_hit_title" translatable="false">revlim_hit</string>
+
     <string name="carbur_fuelcut_temp_threshold_summary"/>
-    
+
+
+
     <string name="adc_errors_title">ADC Errors Corr.</string>
     <string name="adccor_map_sensor_factor_title">MAP Sensor factor</string>
     <string name="adccor_map_sensor_factor_summary"/>
@@ -157,8 +188,12 @@
     <string name="adccor_addi1_sensor_correction_title">ADD_IO1 Sensor correction</string>
     <string name="adccor_addi1_sensor_correction_summary"/>
     <string name="adccor_addi2_sensor_factor_title">ADD_IO2 Sensor factor</string>
+    <string name="adccor_addi3_sensor_factor_title">ADD_IO3 Sensor factor</string>
+    <string name="adccor_addi4_sensor_factor_title">ADD_IO4 Sensor factor</string>
     <string name="adccor_addi2_sensor_factor_summary"/>
     <string name="adccor_addi2_sensor_correction_title">ADD_IO2 Sensor correction</string>
+    <string name="adccor_addi3_sensor_correction_title">ADD_IO3 Sensor correction</string>
+    <string name="adccor_addi4_sensor_correction_title">ADD_IO4 Sensor correction</string>
     <string name="adccor_addi2_sensor_correction_summary"/>
     
     <string name="ckps_title">CKPS</string>
@@ -195,7 +230,13 @@
     <string name="miscel_hall_output_start_summary"/>
     <string name="miscel_hall_output_delay_title">Hall output pulse duration (in wheel teeth)</string>
     <string name="miscel_hall_output_delay_summary"/>
-    
+
+    <!-- TODO Check and translate -->
+    <string name="miscel_fuel_pump_flags_title" translatable="false">miscel_fuel_pump_flags_title</string>
+    <string name="miscel_evap_afbegin_title" translatable="false">miscel_evap_afbegin_title</string>
+    <string name="miscel_evap_afslope_title" translatable="false">miscel_evap_afslope_title</string>
+    <string name="miscel_fp_timeout_strt_title" translatable="false">miscel_fp_timeout_strt_title</string>
+
     <string name="choke_control_title">Choke control</string>
     <string name="choke_steps_title">Number of SM steps</string>
     <string name="choke_steps_summary"/>

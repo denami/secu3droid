@@ -66,12 +66,17 @@
     <string name="adcraw_tps_title" translatable="false">TPS</string>
     <string name="adcraw_addi1_title" translatable="false">ADD_IO1</string>
     <string name="adcraw_addi2_title" translatable="false">ADD_IO2</string>
-    
+    <string name="adcraw_addi3_title" translatable="false">ADD_IO3</string>
+    <string name="adcraw_addi4_title" translatable="false">ADD_IO4</string>
+
     <string name="fnname_dat_title" translatable="false">Function names</string>
     <string name="fnname_dat_quantity_title" translatable="false">Total quantity</string>
     <string name="fnname_dat_index_title" translatable="false">Current index</string>
     <string name="fnname_dat_data_title" translatable="false">Function name</string>
-    
+
+    <string name="signf_dat_title" translatable="false">Signature info</string>
+    <string name="signf_dat_data_title" translatable="false">Signature name</string>
+
     <string name="fwinfo_dat_title" translatable="false">Firmware info</string>
     <string name="fwinfo_dat_data_title" translatable="false">Firmware tag</string>
     <string name="fwinfo_dat_options_title" translatable="false">Firmware options</string>
